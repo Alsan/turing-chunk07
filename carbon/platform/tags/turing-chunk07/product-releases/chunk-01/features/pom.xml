@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk01</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-features</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Patch releases - features - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+	 <module>../../../features/ntask</module>
+         <module>../../../features/logging-mgt</module>
+         <module>../../../features/wsdl-tools</module>
+         <module>../../../features/system-statistics</module>
+         <module>../../../features/service-mgt</module>
+         <module>../../../features/security-mgt</module>
+         <module>../../../features/message-flows</module>
+         <module>../../../features/rm</module>
+         <module>../../../features/soap-tracer</module>
+         <module>../../../features/caching</module>
+         <module>../../../features/module-mgt</module>
+         <module>../../../features/axis2-repo-mgt</module>
+         <module>../../../features/service-hosting</module>
+         <module>../../../features/throttle</module>
+         <module>../../../features/registry</module>
+         <module>../../../features/mashup</module>
+        <module>../../../features/as-runtimes</module>
+        <module>../../../features/tryit</module>
+        <module>../../../features/webapp-mgt</module>
+        <module>../../../features/jaxws-webapp-mgt</module>
+        <module>../../../features/xfer/4.2.0</module>
+        <module>../../../features/mex/4.2.0</module>
+	    <module>../../../features/ndatasource</module>
+	    <module>../../../features/jaggery/0.9.0.ALPHA4.wso2v1/features</module>
+        <module>../../../features/data-services</module>
+        <module>../../../features/deployment-synchronizer</module>
+         <module>../../../features/event</module>
+         <module>../../../features/ws-discovery</module>
+	<module>../../../features/dbconsole</module>
+        <module>../../../features/transaction-manager</module>
+         <module>../../../features/xkms</module>
+         <module>../../../features/sts</module>
+	<module>../../../features/identity</module>
+	<module>../../../features/user-manager</module>
+	<module>../../../features/idp-mgt</module>
+         <module>../../../features/profile-management</module>
+         <module>../../../features/claim-management</module>
+        <module>../../../features/ldap-server-manager</module>
+        <module>../../../features/ldap-server</module>
+        <module>../../../features/authenticators</module>
+        <module>../../../features/remote-usermgt</module>
+        <module>../../../features/stratos</module>
+	<module>../../../features/application-deployers</module>
+        <module>../../../features/application-mgt</module>
+	<module>../../../features/transport-mgt</module>
+	<module>../../../features/reporting</module>
+	<module>../../../features/cassandra-jdbc</module>
+        <module>../../../features/data-bridge</module>
+	<module>../../../features/data-agents</module>
+         <module>../../../features/synapse</module>
+	</modules>
+</project>
+

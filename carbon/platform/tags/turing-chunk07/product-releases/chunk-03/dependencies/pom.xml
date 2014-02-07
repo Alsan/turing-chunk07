@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk03</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-dependencies</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - dependencies - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+        
+        <!--module>../../../dependencies/synapse/2.1.1-wso2v9</module-->
+        <module>../../../dependencies/commons/siddhi/2.0.0-wso2v4</module>
+
+        <module>../../../dependencies/hive/0.8.1-wso2v8</module> 
+        <module>../../../dependencies/orbit/hive/0.8.1.wso2v8</module>
+
+        <module>../../../dependencies/orbit/datanucleus-api-jdo/3.1.4.wso2v1</module> 
+        <module>../../../dependencies/orbit/datanucleus-core/3.1.5.wso2v1</module> 
+        <module>../../../dependencies/orbit/datanucleus-rdbms/3.1.5.wso2v1</module> 
+        <module>../../../dependencies/orbit/jdo/3.0.0.wso2v1</module>  
+        <module>../../../dependencies/hadoop/0.20.203.1-wso2v6</module>
+        <module>../../../dependencies/orbit/hadoop-core/0.20.203.1.wso2v6</module> 
+
+        <module>../../../dependencies/cassandra/1.1.3-wso2v5</module>
+        <module>../../../dependencies/orbit/cassandra/1.1.3-wso2v5</module>
+
+    </modules>
+</project>

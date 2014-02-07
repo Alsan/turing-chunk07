@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk03</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-service-stubs</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Prodcut releases - service-stubs - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>   
+		<!-- BAM related service-stubs start-->			
+		<module>../../../service-stubs/org.wso2.carbon.analytics.hive.stub/4.2.1</module>
+		<module>../../../service-stubs/org.wso2.carbon.bam.jmx.agent.stub/4.2.1</module>
+		<module>../../../service-stubs/org.wso2.carbon.bam.message.tracer.handler.stub/4.2.0</module>
+		<!-- BAM related service-stubs end-->
+    </modules>
+</project>

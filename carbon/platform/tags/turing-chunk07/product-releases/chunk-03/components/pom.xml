@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk03</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+		<!-- Data bridge components -->
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.receiver.thrift/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.test.thrift/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.core/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.receiver.restapi/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.streamdefn.cassandra/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.persistence.cassandra/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.streamdefn.registry/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.datasink.cassandra/4.2.0</module>
+        <!-- End of Data bridge components -->
+        
+        <!-- BAM components -->
+        <module>../../../components/dashboard</module> 
+        <module>../../../components/bam2</module>
+        <module>../../../components/analytics</module>
+        <module>../../../components/gadgets</module>
+	<module>../../../components/cassandra-search</module>
+	<module>../../../components/cassandra-explorer</module>
+        <!-- End of BAM agent components -->
+
+	<!-- Cassandra component -->
+	<module>../../../components/cassandra</module>
+
+	<!-- CEP components -->
+        <module>../../../components/event-processing</module>
+
+        <!-- Data agent components -->
+        <module>../../../components/data-agents/org.wso2.carbon.bam.data.publisher.util/4.2.1</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.webapp.stat.publisher/4.2.1</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.service.data.publisher/4.2.1</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.service.data.publisher.ui/4.2.1</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.mediationstats.data.publisher/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.mediationstats.data.publisher.ui/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.jmx.agent/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.jmx.agent.ui/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.filter/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.handler/4.2.0</module>
+        <module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.handler.ui/4.2.0</module>
+        <!-- End of Data agent components -->
+
+        <!-- Reporting components -->
+	<module>../../../components/reporting/org.wso2.carbon.reporting.template.ui/4.2.0</module>
+	<module>../../../components/reporting/org.wso2.carbon.reporting.template.core/4.2.0</module>
+	<module>../../../components/reporting/org.wso2.carbon.reporting.custom.ui/4.2.0</module>   
+	
+	<module>../../../components/application-deployers/org.wso2.carbon.application.deployer.bam/4.2.0</module>  
+
+	<module>../../../components/identity/org.wso2.carbon.identity.application.authenticator.basicauth/4.2.1</module>  
+        <module>../../../components/ndatasource/org.wso2.carbon.ndatasource.ui/4.2.1</module>
+    
+    <!--AS Components-->
+    <module>../../../components/axis2-repo-mgt/org.wso2.carbon.repomanager.axis2/4.2.1</module>
+    <!-- End AS Components -->
+	
+    </modules>
+</project>

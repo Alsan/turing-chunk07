@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk03</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases-features</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Patch releases - features - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+        <!-- data-bridge features -->
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.core.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.receiver.thrift.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.receiver.restapi.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.streamdefn.cassandra.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.streamdefn.cassandra.feature/4.2.0</module>   
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.datareceiver.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.streamdefn.registry.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.datasink.cassandra.server.feature/4.2.0</module>
+        <module>../../../features/data-bridge/org.wso2.carbon.databridge.cassandra.feature/4.2.0</module>
+        
+        <!-- Start of BAM features -->
+        <module>../../../features/data-agents/message-tracer-handler</module>
+        <module>../../../features/bam2</module>
+        <module>../../../features/analytics</module>     
+        <module>../../../features/cassandra-search/org.wso2.carbon.cassandra.search.server.feature/4.2.0</module>
+        <module>../../../features/dashboard</module>
+        <module>../../../features/gadgets</module>
+        <module>../../../features/gadgetgen-wizard</module>     
+        <!-- end of BAM features -->
+        
+        <module>../../../features/cassandra</module>
+        <module>../../../features/cassandra-explorer</module>
+
+        <!-- Features related to CEP -->
+        <module>../../../features/event-processing</module>
+        <module>../../../features/caramel/0.9.0.ALPHA1.wso2v1</module>
+        <module>../../../features/hostobjects</module>
+        <module>../../../features/webapp-mgt/org.wso2.carbon.webapp.mgt.server.feature/4.2.1</module>
+        <module>../../../features/webapp-mgt/org.wso2.carbon.webapp.mgt.feature/4.2.1</module>
+
+        <module>../../../features/ndatasource/org.wso2.carbon.ndatasource.ui.feature/4.2.1</module>
+        <module>../../../features/ndatasource/org.wso2.carbon.ndatasource.feature/4.2.1</module>
+
+        <!-- data-agents features -->
+        <module>../../../features/data-agents/mediation</module>
+        <module>../../../features/data-agents/jmx</module>
+        <module>../../../features/data-agents/service/org.wso2.carbon.bam.service.agent.server.feature/4.2.1</module>
+        <module>../../../features/data-agents/service/org.wso2.carbon.bam.service.agent.ui.feature/4.2.1</module>
+        <module>../../../features/data-agents/service/org.wso2.carbon.bam.service.agent.feature/4.2.1</module>
+        <!-- End of data-agent features -->
+        
+        <!-- reporting features -->
+	<module>../../../features/reporting/org.wso2.carbon.reporting.template.server.feature/4.2.0</module>
+	<module>../../../features/reporting/org.wso2.carbon.reporting.feature/4.2.0</module>
+	<module>../../../features/reporting/org.wso2.carbon.reporting.template.ui.feature/4.2.0</module>
+		
+	<module>../../../features/application-deployers/org.wso2.carbon.application.deployer.bam.feature/4.2.0</module>
+        
+	<module>../../../features/as-runtimes/org.wso2.carbon.as.runtimes.cxf.feature/4.2.1</module>
+	<module>../../../features/identity/application-authenticators/basic-auth/org.wso2.carbon.identity.application.authenticator.basicauth.server.feature/4.2.1</module>
+	<module>../../../features/identity/relying-party/org.wso2.carbon.identity.relying.party.feature/4.2.1</module>
+	
+	<module>../../../features/axis2-repo-mgt/org.wso2.carbon.repomanager.axis2.server.feature/4.2.1</module>
+        <module>../../../features/axis2-repo-mgt/org.wso2.carbon.repomanager.axis2.feature/4.2.1</module>
+	<module>../../../features/identity/sso-saml/org.wso2.carbon.identity.sso.saml.server.feature/4.2.1</module>
+        <module>../../../features/identity/sso-saml/org.wso2.carbon.identity.sso.saml.feature/4.2.1</module>
+    </modules>
+</project>
+
