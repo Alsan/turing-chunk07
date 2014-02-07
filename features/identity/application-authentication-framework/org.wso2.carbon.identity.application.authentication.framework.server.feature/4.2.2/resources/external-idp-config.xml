@@ -1,0 +1,13 @@
+<idp-configs>    
+    <idp-config name="WSO2IS">
+        <Parameter name="IdPLoginURL">https://idp.com:9444/samlsso</Parameter>
+        <Parameter name="IdPLogoutURL">https://idp.com:9444/samlsso</Parameter>
+        <Parameter name="ServiceProviderID">carbonServer</Parameter>
+        <Parameter name="IdPCertAlias">wso2carbon</Parameter>
+        <Parameter name="EnableRequestSigning">false</Parameter>
+        <Parameter name="EnableResponseSignatureValidation">true</Parameter>
+        <Parameter name="EnableAssertionSignatureValidation">true</Parameter>
+        <Parameter name="EnableSLO">false</Parameter>
+        <Parameter name="CredentialImplClass">org.wso2.carbon.identity.application.authenticator.samlsso.manager.SSOAgentKeyStoreCredential</Parameter>
+    </idp-config>
+</idp-configs>

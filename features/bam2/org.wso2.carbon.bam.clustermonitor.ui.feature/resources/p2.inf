@@ -1,0 +1,2 @@
+instructions.configure = \
+org.eclipse.equinox.p2.touchpoint.natives.copy(source:${installFolder}/../cluster-monitor.xml,target:${installFolder}/../../conf/cluster-monitor.xml,overwrite:true);\
