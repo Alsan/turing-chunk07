@@ -1,0 +1,8 @@
+This folder contain the tools and scripts needed to manage the Stratos infrastructure which uses new Autoscaler
+component and Elastic Load Balancer.
+
+openstack/openStack-lxc-ubuntu-precise contain instructions and scripts on how to install openstack controller and compute nodes.
+
+setup folder is a template of the release pack.
+
+s2_release_process document contain the process on how to do a release.
