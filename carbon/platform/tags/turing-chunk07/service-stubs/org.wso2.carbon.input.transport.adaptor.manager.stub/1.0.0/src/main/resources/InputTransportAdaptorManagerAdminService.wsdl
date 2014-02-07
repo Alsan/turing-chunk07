@@ -1,0 +1,714 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org" xmlns:ax2201="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org">
+    <wsdl:documentation>InputTransportAdaptorManagerAdminService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org/xsd">
+            <xs:complexType name="InputTransportAdaptorPropertiesDto">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="inputTransportAdaptorPropertyDtos" nillable="true" type="ax2201:InputTransportAdaptorPropertyDto"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="InputTransportAdaptorPropertyDto">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="defaultValue" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="hint" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="key" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="options" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="required" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="secured" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="value" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="InputTransportAdaptorFileDto">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="InputTransportAdaptorConfigurationInfoDto">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="enableStats" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="enableTracing" type="xs:boolean"/>
+                    <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="transportAdaptorType" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax2202="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org">
+            <xs:import namespace="http://internal.admin.manager.adaptor.transport.input.carbon.wso2.org/xsd"/>
+            <xs:element name="undeployInactiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="undeployActiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setTracingEnabled">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="flag" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="setStatisticsEnabled">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="flag" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getInputTransportAdaptorProperties">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getInputTransportAdaptorPropertiesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax2201:InputTransportAdaptorPropertiesDto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getInactiveInputTransportAdaptorConfigurationContent">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getInactiveInputTransportAdaptorConfigurationContentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllInputTransportAdaptorTypeNames">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllInputTransportAdaptorTypeNamesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllInactiveInputTransportAdaptorConfigurationFile">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllInactiveInputTransportAdaptorConfigurationFileResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2201:InputTransportAdaptorFileDto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllActiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllActiveInputTransportAdaptorConfigurationResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax2201:InputTransportAdaptorConfigurationInfoDto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getActiveInputTransportAdaptorConfigurationContent">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getActiveInputTransportAdaptorConfigurationContentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getActiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getActiveInputTransportAdaptorConfigurationResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax2201:InputTransportAdaptorPropertiesDto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="editInactiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorConfiguration" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="editActiveInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorConfiguration" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="deployInputTransportAdaptorConfiguration">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="transportAdaptorName" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="transportAdaptorType" nillable="true" type="xs:string"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="inputAdaptorPropertyDtoInputs" nillable="true" type="ax2201:InputTransportAdaptorPropertyDto"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getActiveInputTransportAdaptorConfigurationContentRequest">
+        <wsdl:part name="parameters" element="ns:getActiveInputTransportAdaptorConfigurationContent"/>
+    </wsdl:message>
+    <wsdl:message name="getActiveInputTransportAdaptorConfigurationContentResponse">
+        <wsdl:part name="parameters" element="ns:getActiveInputTransportAdaptorConfigurationContentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="undeployInactiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:undeployInactiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="undeployInactiveInputTransportAdaptorConfigurationResponse"/>
+    <wsdl:message name="undeployActiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:undeployActiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="undeployActiveInputTransportAdaptorConfigurationResponse"/>
+    <wsdl:message name="getInactiveInputTransportAdaptorConfigurationContentRequest">
+        <wsdl:part name="parameters" element="ns:getInactiveInputTransportAdaptorConfigurationContent"/>
+    </wsdl:message>
+    <wsdl:message name="getInactiveInputTransportAdaptorConfigurationContentResponse">
+        <wsdl:part name="parameters" element="ns:getInactiveInputTransportAdaptorConfigurationContentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="setStatisticsEnabledRequest">
+        <wsdl:part name="parameters" element="ns:setStatisticsEnabled"/>
+    </wsdl:message>
+    <wsdl:message name="setStatisticsEnabledResponse"/>
+    <wsdl:message name="getActiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:getActiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="getActiveInputTransportAdaptorConfigurationResponse">
+        <wsdl:part name="parameters" element="ns:getActiveInputTransportAdaptorConfigurationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="editActiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:editActiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="editActiveInputTransportAdaptorConfigurationResponse"/>
+    <wsdl:message name="getAllActiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:getAllActiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="getAllActiveInputTransportAdaptorConfigurationResponse">
+        <wsdl:part name="parameters" element="ns:getAllActiveInputTransportAdaptorConfigurationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getAllInactiveInputTransportAdaptorConfigurationFileRequest">
+        <wsdl:part name="parameters" element="ns:getAllInactiveInputTransportAdaptorConfigurationFile"/>
+    </wsdl:message>
+    <wsdl:message name="getAllInactiveInputTransportAdaptorConfigurationFileResponse">
+        <wsdl:part name="parameters" element="ns:getAllInactiveInputTransportAdaptorConfigurationFileResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getInputTransportAdaptorPropertiesRequest">
+        <wsdl:part name="parameters" element="ns:getInputTransportAdaptorProperties"/>
+    </wsdl:message>
+    <wsdl:message name="getInputTransportAdaptorPropertiesResponse">
+        <wsdl:part name="parameters" element="ns:getInputTransportAdaptorPropertiesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="setTracingEnabledRequest">
+        <wsdl:part name="parameters" element="ns:setTracingEnabled"/>
+    </wsdl:message>
+    <wsdl:message name="setTracingEnabledResponse"/>
+    <wsdl:message name="editInactiveInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:editInactiveInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="editInactiveInputTransportAdaptorConfigurationResponse"/>
+    <wsdl:message name="getAllInputTransportAdaptorTypeNamesRequest">
+        <wsdl:part name="parameters" element="ns:getAllInputTransportAdaptorTypeNames"/>
+    </wsdl:message>
+    <wsdl:message name="getAllInputTransportAdaptorTypeNamesResponse">
+        <wsdl:part name="parameters" element="ns:getAllInputTransportAdaptorTypeNamesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="deployInputTransportAdaptorConfigurationRequest">
+        <wsdl:part name="parameters" element="ns:deployInputTransportAdaptorConfiguration"/>
+    </wsdl:message>
+    <wsdl:message name="deployInputTransportAdaptorConfigurationResponse"/>
+    <wsdl:portType name="InputTransportAdaptorManagerAdminServicePortType">
+        <wsdl:operation name="getActiveInputTransportAdaptorConfigurationContent">
+            <wsdl:input message="ns:getActiveInputTransportAdaptorConfigurationContentRequest" wsaw:Action="urn:getActiveInputTransportAdaptorConfigurationContent"/>
+            <wsdl:output message="ns:getActiveInputTransportAdaptorConfigurationContentResponse" wsaw:Action="urn:getActiveInputTransportAdaptorConfigurationContentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="undeployInactiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:undeployInactiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:undeployInactiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:undeployInactiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:undeployInactiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="undeployActiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:undeployActiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:undeployActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:undeployActiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:undeployActiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInactiveInputTransportAdaptorConfigurationContent">
+            <wsdl:input message="ns:getInactiveInputTransportAdaptorConfigurationContentRequest" wsaw:Action="urn:getInactiveInputTransportAdaptorConfigurationContent"/>
+            <wsdl:output message="ns:getInactiveInputTransportAdaptorConfigurationContentResponse" wsaw:Action="urn:getInactiveInputTransportAdaptorConfigurationContentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="setStatisticsEnabled">
+            <wsdl:input message="ns:setStatisticsEnabledRequest" wsaw:Action="urn:setStatisticsEnabled"/>
+            <wsdl:output message="ns:setStatisticsEnabledResponse" wsaw:Action="urn:setStatisticsEnabledResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:getActiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:getActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:getActiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:getActiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="editActiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:editActiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:editActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:editActiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:editActiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllActiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:getAllActiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:getAllActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:getAllActiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:getAllActiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInactiveInputTransportAdaptorConfigurationFile">
+            <wsdl:input message="ns:getAllInactiveInputTransportAdaptorConfigurationFileRequest" wsaw:Action="urn:getAllInactiveInputTransportAdaptorConfigurationFile"/>
+            <wsdl:output message="ns:getAllInactiveInputTransportAdaptorConfigurationFileResponse" wsaw:Action="urn:getAllInactiveInputTransportAdaptorConfigurationFileResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInputTransportAdaptorProperties">
+            <wsdl:input message="ns:getInputTransportAdaptorPropertiesRequest" wsaw:Action="urn:getInputTransportAdaptorProperties"/>
+            <wsdl:output message="ns:getInputTransportAdaptorPropertiesResponse" wsaw:Action="urn:getInputTransportAdaptorPropertiesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="setTracingEnabled">
+            <wsdl:input message="ns:setTracingEnabledRequest" wsaw:Action="urn:setTracingEnabled"/>
+            <wsdl:output message="ns:setTracingEnabledResponse" wsaw:Action="urn:setTracingEnabledResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="editInactiveInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:editInactiveInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:editInactiveInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:editInactiveInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:editInactiveInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInputTransportAdaptorTypeNames">
+            <wsdl:input message="ns:getAllInputTransportAdaptorTypeNamesRequest" wsaw:Action="urn:getAllInputTransportAdaptorTypeNames"/>
+            <wsdl:output message="ns:getAllInputTransportAdaptorTypeNamesResponse" wsaw:Action="urn:getAllInputTransportAdaptorTypeNamesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deployInputTransportAdaptorConfiguration">
+            <wsdl:input message="ns:deployInputTransportAdaptorConfigurationRequest" wsaw:Action="urn:deployInputTransportAdaptorConfiguration"/>
+            <wsdl:output message="ns:deployInputTransportAdaptorConfigurationResponse" wsaw:Action="urn:deployInputTransportAdaptorConfigurationResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InputTransportAdaptorManagerAdminServiceSoap11Binding" type="ns:InputTransportAdaptorManagerAdminServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfigurationContent">
+            <soap:operation soapAction="urn:getActiveInputTransportAdaptorConfigurationContent" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployActiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:undeployActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployInactiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:undeployInactiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInactiveInputTransportAdaptorConfigurationContent">
+            <soap:operation soapAction="urn:getInactiveInputTransportAdaptorConfigurationContent" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setStatisticsEnabled">
+            <soap:operation soapAction="urn:setStatisticsEnabled" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:getActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editActiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:editActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInactiveInputTransportAdaptorConfigurationFile">
+            <soap:operation soapAction="urn:getAllInactiveInputTransportAdaptorConfigurationFile" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllActiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:getAllActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setTracingEnabled">
+            <soap:operation soapAction="urn:setTracingEnabled" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInputTransportAdaptorProperties">
+            <soap:operation soapAction="urn:getInputTransportAdaptorProperties" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editInactiveInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:editInactiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deployInputTransportAdaptorConfiguration">
+            <soap:operation soapAction="urn:deployInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInputTransportAdaptorTypeNames">
+            <soap:operation soapAction="urn:getAllInputTransportAdaptorTypeNames" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="InputTransportAdaptorManagerAdminServiceSoap12Binding" type="ns:InputTransportAdaptorManagerAdminServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfigurationContent">
+            <soap12:operation soapAction="urn:getActiveInputTransportAdaptorConfigurationContent" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployActiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:undeployActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployInactiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:undeployInactiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInactiveInputTransportAdaptorConfigurationContent">
+            <soap12:operation soapAction="urn:getInactiveInputTransportAdaptorConfigurationContent" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setStatisticsEnabled">
+            <soap12:operation soapAction="urn:setStatisticsEnabled" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:getActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editActiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:editActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInactiveInputTransportAdaptorConfigurationFile">
+            <soap12:operation soapAction="urn:getAllInactiveInputTransportAdaptorConfigurationFile" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllActiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:getAllActiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setTracingEnabled">
+            <soap12:operation soapAction="urn:setTracingEnabled" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInputTransportAdaptorProperties">
+            <soap12:operation soapAction="urn:getInputTransportAdaptorProperties" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editInactiveInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:editInactiveInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deployInputTransportAdaptorConfiguration">
+            <soap12:operation soapAction="urn:deployInputTransportAdaptorConfiguration" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInputTransportAdaptorTypeNames">
+            <soap12:operation soapAction="urn:getAllInputTransportAdaptorTypeNames" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="InputTransportAdaptorManagerAdminServiceHttpBinding" type="ns:InputTransportAdaptorManagerAdminServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfigurationContent">
+            <http:operation location="getActiveInputTransportAdaptorConfigurationContent"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployActiveInputTransportAdaptorConfiguration">
+            <http:operation location="undeployActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="undeployInactiveInputTransportAdaptorConfiguration">
+            <http:operation location="undeployInactiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInactiveInputTransportAdaptorConfigurationContent">
+            <http:operation location="getInactiveInputTransportAdaptorConfigurationContent"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setStatisticsEnabled">
+            <http:operation location="setStatisticsEnabled"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getActiveInputTransportAdaptorConfiguration">
+            <http:operation location="getActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editActiveInputTransportAdaptorConfiguration">
+            <http:operation location="editActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInactiveInputTransportAdaptorConfigurationFile">
+            <http:operation location="getAllInactiveInputTransportAdaptorConfigurationFile"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllActiveInputTransportAdaptorConfiguration">
+            <http:operation location="getAllActiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="setTracingEnabled">
+            <http:operation location="setTracingEnabled"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getInputTransportAdaptorProperties">
+            <http:operation location="getInputTransportAdaptorProperties"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="editInactiveInputTransportAdaptorConfiguration">
+            <http:operation location="editInactiveInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deployInputTransportAdaptorConfiguration">
+            <http:operation location="deployInputTransportAdaptorConfiguration"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getAllInputTransportAdaptorTypeNames">
+            <http:operation location="getAllInputTransportAdaptorTypeNames"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InputTransportAdaptorManagerAdminService">
+        <wsdl:port name="InputTransportAdaptorManagerAdminServiceHttpsSoap11Endpoint" binding="ns:InputTransportAdaptorManagerAdminServiceSoap11Binding">
+            <soap:address location="https://10.200.1.136:9443/services/InputTransportAdaptorManagerAdminService.InputTransportAdaptorManagerAdminServiceHttpsSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="InputTransportAdaptorManagerAdminServiceHttpsSoap12Endpoint" binding="ns:InputTransportAdaptorManagerAdminServiceSoap12Binding">
+            <soap12:address location="https://10.200.1.136:9443/services/InputTransportAdaptorManagerAdminService.InputTransportAdaptorManagerAdminServiceHttpsSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="InputTransportAdaptorManagerAdminServiceHttpsEndpoint" binding="ns:InputTransportAdaptorManagerAdminServiceHttpBinding">
+            <http:address location="https://10.200.1.136:9443/services/InputTransportAdaptorManagerAdminService.InputTransportAdaptorManagerAdminServiceHttpsEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
