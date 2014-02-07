@@ -1,0 +1,34 @@
+<%
+
+var userInfoClient = require('/controllers/login-logout/loggedUserInfoAdminClient.jag');
+include("/util/constants.jag");
+var util = require("/util/utility.jag");
+var loginClient = require('/controllers/login-logout/SAML2SSOAuthenticationClient.jag');
+
+var i18n = util.initI18N();
+
+var filter = Packages.org.wso2.carbon.identity.user.saml.sso.SAML2SSOFilter;
+filter.handleSSO(request.getHttpServletRequest(), response.getHttpServletResponse(), application.get(SERVER_URL));
+
+var samlResponse = session.get(SAML_RESPONSE);
+var success = loginClient.login(samlResponse);
+if(success === "true")
+{
+	session.put(LOGGED_IN_USER, session.get(USER_NAME));
+	
+    var userInfo = userInfoClient.getUserInfo();
+    session.put(UI_USER_PERMISSIONS, userInfo.UIPermissionOfUser);
+    
+    //create the header html for the user
+    var header = util.generateHeader(true, i18n);
+    
+    header = parse(stringify(header));
+    log.debug(header);
+    
+    session.put(USER_HEADER, header);
+    
+    response.sendRedirect("index.jag");
+}else{
+    response.sendRedirect("login.jag?e=1&error=login_fail" );
+}
+%>
