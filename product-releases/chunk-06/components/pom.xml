@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk06</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+
+	<module>../../../components/security/org.wso2.carbon.security.mgt/4.2.4</module>
+
+	<!-- APIM Components start-->
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.api/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.impl/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.hostobjects/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.keymgt/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.keymgt.client/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.gateway/1.2.1</module>
+        <!--module>../../../components/apimgt/org.wso2.carbon.apimgt.usage</module-->
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.core/1.2.1</module>
+        <module>../../../components/apimgt/org.wso2.carbon.apimgt.interceptor/1.2.1</module>
+        <!--module>../../../components/apimgt/org.wso2.carbon.apimgt.startup.publisher/1.2.0</module-->
+        <!-- APIM Components end-->
+
+        <!-- Identity components start -->
+	<module>../../../components/identity/org.wso2.carbon.identity.base/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.core/4.2.2</module>
+        <!--module>../../../components/identity/org.wso2.carbon.identity.entitlement/4.2.1</module-->
+        <module>../../../components/identity/org.wso2.carbon.identity.entitlement.ui/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.mgt/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.scim.common/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.scim.provider/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.scim.ui/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.sso.agent/1.1.0</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.common/4.2.2</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth/4.2.2</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.endpoint/4.2.2</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.application.authentication.endpoint/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.ui/4.2.2</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.user.registration/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.sso.saml.ui/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.sso.saml/4.2.2</module>
+	<!-- Identity components end -->
+
+	<!-- SAML authedicatiors start -->
+	<module>../../../components/authenticators/saml2-sso-authenticator/org.wso2.carbon.identity.authenticator.saml2.sso/4.2.1</module>
+        <module>../../../components/authenticators/saml2-sso-authenticator/org.wso2.carbon.identity.authenticator.saml2.sso.common/4.2.1</module>
+	<!-- SAML authedicatiors end -->
+
+	<!-- mediation components start -->
+        <module>../../../components/mediation-initializer/org.wso2.carbon.mediation.initializer/4.2.1</module>
+	<!-- mediation components end -->
+
+        <!-- LDAP server component -->
+        <module>../../../components/ldap-server/org.wso2.carbon.ldap.server/4.2.1</module>
+        <!-- Hadoop component End -->
+
+        <!-- Cassandra component -->
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.common/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.server/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.dataaccess/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.mgt/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.mgt.ui/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.examples/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.sharedkey/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.cluster/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.cluster.mgt/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.cluster.mgt.ui/4.2.1</module>
+        <module>../../../components/cassandra/org.wso2.carbon.cassandra.cluster.proxy/4.2.1</module>
+        <!-- Cassandra component End -->
+       
+	<!-- Cassandra-explorer component -->
+        <module>../../../components/cassandra-explorer/org.wso2.carbon.cassandra.explorer.mgt/4.2.1</module>
+        <module>../../../components/cassandra-explorer/org.wso2.carbon.cassandra.explorer.ui/4.2.1</module>
+        <!-- Cassandra-explorer component End -->
+
+	<!-- Hadoop component -->
+        <module>../../../components/mapred</module>
+        <module>../../../components/hdfs</module>
+        <!-- Hadoop component End -->
+
+	<!-- Rss manager component -->
+        <module>../../../components/rss-manager</module>
+        <!-- Rss manager component End -->
+
+	<!-- BAM message tracer components -->
+	<module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.handler/4.2.1</module>
+	<module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.handler.ui/4.2.1</module>
+	<!-- BAM message tracer components end-->
+
+    </modules>
+</project>

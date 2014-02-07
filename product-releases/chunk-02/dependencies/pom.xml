@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk02</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-dependencies</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - dependencies - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+        
+        <module>../../../dependencies/httpcore-nio/4.2.3-wso2v3</module>
+        <module>../../../dependencies/orbit/httpcore-nio/4.2.3.wso2v3</module>
+        <module>../../../dependencies/commons/uri-templates/1.6.4</module>
+        <!--module>../../../dependencies/synapse/2.1.1-wso2v9</module-->
+        <module>../../../dependencies/jclouds/ec2-api/1.6.0-wso2v1</module>
+        <module>../../../dependencies/jclouds/aws-ec2/1.6.0-wso2v1</module>
+        <module>../../../dependencies/jclouds/openstack-keystone/1.6.0-wso2v1</module>
+        <module>../../../dependencies/jclouds/openstack-nova/1.6.0-wso2v1</module>
+        <module>../../../dependencies/ode/1.3.5-wso2v9</module>
+        <module>../../../dependencies/orbit/ode/1.3.5.wso2v9</module>
+	<module>../../../dependencies/synapse/2.1.2-wso2v1</module> 
+        <module>../../../dependencies/commons/caching/4.0.2</module>
+        <!--module>../../../dependencies/orbit/hive/0.8.1.wso2v8</module-->
+	<module>../../../dependencies/rampart/1.6.1-wso2v11</module>
+	<module>../../../dependencies/orbit/rampart-core/1.6.1.wso2v11</module>
+	<module>../../../dependencies/orbit/rampart-policy/1.6.1.wso2v11</module>
+	<module>../../../dependencies/orbit/rampart-trust/1.6.1.wso2v11</module>
+	<module>../../../dependencies/staxon/1.2.0-wso2v1</module>  
+        <module>../../../dependencies/orbit/staxon/1.2.0.wso2v1</module>
+    </modules>
+</project>

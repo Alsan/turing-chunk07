@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk05</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+
+	<module>../../../components/security/org.wso2.carbon.security.mgt/4.2.3</module>
+
+
+	<module>../../../components/application-mgt/org.wso2.carbon.application.mgt.bpel/4.2.0</module>
+	<module>../../../components/application-mgt/org.wso2.carbon.application.mgt.humantask/4.2.0</module>
+	<module>../../../components/application-mgt/org.wso2.carbon.application.mgt.bpel.ui/4.2.0</module>
+	<module>../../../components/application-mgt/org.wso2.carbon.application.mgt.humantask.ui/4.2.0</module>
+
+	<module>../../../components/application-deployers/org.wso2.carbon.application.deployer.bpel/4.2.0</module>
+	<module>../../../components/application-deployers/org.wso2.carbon.application.deployer.humantask/4.2.0</module>
+
+	<module>../../../components/business-processes/common/4.2.1</module>
+	<module>../../../components/business-processes/bpel</module>
+	<module>../../../components/business-processes/humantask/org.wso2.carbon.humantask/4.2.1</module>
+	<module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.deployer/4.2.1</module>
+	<module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.ui/4.2.1</module>
+	<module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.cleanup.scheduler/4.2.1</module>
+	<module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.coordination.module/4.2.1</module>
+	<module>../../../components/business-processes/attachment-mgt/org.wso2.carbon.attachment.mgt/4.2.1</module>
+	<module>../../../components/unified-endpoint/org.wso2.carbon.unifiedendpoint.core/4.2.1</module>
+
+	<!--DSS-->
+
+	<module>../../../components/data-services/org.wso2.carbon.dataservices.common/4.2.1</module>
+	<module>../../../components/data-services/org.wso2.carbon.dataservices.core/4.2.1</module>
+	<module>../../../components/data-services/org.wso2.carbon.dataservices.ui/4.2.1</module>
+	<module>../../../components/data-services/org.wso2.carbon.dataservices.task/4.2.1</module>
+	<module>../../../components/ndatasource/org.wso2.carbon.ndatasource.ui/4.2.2</module>
+
+	<!--AS-->
+	<module>../../../components/webapp-mgt/org.wso2.carbon.webapp.list.ui/4.2.1</module>
+	<module>../../../components/webapp-mgt/org.wso2.carbon.webapp.mgt/4.2.2</module>
+	<!--AS-->
+
+	<!-- Mashup components   -->
+        <module>../../../components/mashup/org.wso2.carbon.mashup.javascript-hostobjects.system/4.2.1</module>
+        <module>../../../components/mashup/org.wso2.carbon.mashup.jsservices/4.2.1</module>
+	<module>../../../components/mashup/org.wso2.carbon.mashup.javascript-hostobjects.registry/4.2.1</module>
+
+
+	<!-- Logging Management component -->
+        <module>../../../components/logging/org.wso2.carbon.logging.service/4.2.1</module>
+        <!-- Logging Management component End -->
+
+    </modules>
+</project>

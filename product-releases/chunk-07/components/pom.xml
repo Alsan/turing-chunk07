@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk07</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+
+	<!-- BPS components -->
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel.b4p/4.2.1</module>
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel.cluster.notifier/4.2.1</module>
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel.ui/4.2.1</module>
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel/4.2.1</module>
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel.deployer/4.2.1</module>
+        <module>../../../components/business-processes/bpel/org.wso2.carbon.bpel.bam.publisher/4.2.1</module>
+        <module>../../../components/business-processes/humantask/org.wso2.carbon.humantask/4.2.2</module>
+        <module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.deployer/4.2.2</module>
+        <module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.ui/4.2.2</module>
+        <module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.cleanup.scheduler/4.2.2</module>
+        <module>../../../components/business-processes/humantask/org.wso2.carbon.humantask.coordination.module/4.2.2</module>
+	<module>../../../components/business-processes/attachment-mgt/org.wso2.carbon.attachment.mgt/4.2.2</module>
+        <!-- BPS components end-->
+
+	<!-- Application Deployers -->
+	<module>../../../components/application-deployers/org.wso2.carbon.application.deployer.bpel/4.2.1</module>
+        <module>../../../components/application-deployers/org.wso2.carbon.application.deployer.synapse/4.2.2</module>
+	<!-- Application Deployers end -->
+
+        <!-- ESB Components -->
+        <module>../../../components/mediators/log/org.wso2.carbon.mediator.log.ui/4.2.1</module>
+        <module>../../../components/mediators/property/org.wso2.carbon.mediator.property.ui/4.2.1</module>
+        <module>../../../components/business-messaging/hl7/org.wso2.carbon.business.messaging.hl7.common/4.2.1</module>
+        <module>../../../components/business-messaging/hl7/org.wso2.carbon.business.messaging.hl7.message/4.2.1</module>
+        <module>../../../components/business-messaging/hl7/org.wso2.carbon.business.messaging.hl7.transport/4.2.1</module>
+        <module>../../../components/business-messaging/hl7/org.wso2.carbon.business.messaging.hl7.store/4.2.0</module>
+        <module>../../../components/business-messaging/hl7/org.wso2.carbon.business.messaging.hl7.store.ui/4.2.0</module>
+        <module>../../../components/mediation-initializer/org.wso2.carbon.mediation.initializer/4.2.2</module>
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.nhttp/4.2.2</module>
+        <module>../../../components/proxy-admin/org.wso2.carbon.proxyadmin/4.2.2</module>
+        <module>../../../components/mediators/fastXSLT/org.wso2.carbon.mediator.fastXSLT/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.entitlement.mediator/4.2.2</module>
+        <module>../../../components/mediators/event/org.wso2.carbon.mediator.event/4.2.1</module>
+        <module>../../../components/synapse-registries/org.wso2.carbon.mediation.registry/4.2.1</module>
+        <module>../../../components/endpoint/org.wso2.carbon.endpoint/4.2.1</module>
+        <module>../../../components/endpoint/org.wso2.carbon.endpoint.ui/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.mediator/4.2.2</module> 
+        <!-- ESB Components end -->
+
+	<module>../../../components/data-agents/org.wso2.carbon.bam.message.tracer.handler/4.2.2</module>
+
+        <!--module>../../../components/apimgt/org.wso2.carbon.apimgt.usage</module-->
+        <!--module>../../../components/apimgt/org.wso2.carbon.apimgt.startup.publisher/1.2.0</module-->
+        <!--module>../../../components/identity/org.wso2.carbon.identity.entitlement/4.2.1</module-->
+
+    </modules>
+</project>

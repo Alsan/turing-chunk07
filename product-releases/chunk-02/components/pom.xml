@@ -1,0 +1,211 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk02</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+
+        <!-- Regitry components -->
+        <module>../../../components/registry/org.wso2.carbon.registry.uddi/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.extensions/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.extensions.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.handler.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.handler/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.info.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.info/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.activities.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.activities/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.relations.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.relations/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.ws.api/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.ws.client/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.indexing.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.webdav/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.jcr/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.social.api/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.social.impl/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.task/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.reporting/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.reporting.ui/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.rest.api/4.2.0</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.cmis/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.resource.ui/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.eventing/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.indexing/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.search.ui/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.search/4.2.1</module> 
+        <module>../../../components/registry/org.wso2.carbon.registry.common/4.2.1</module>
+        <module>../../../components/registry/org.wso2.carbon.registry.properties/4.2.1</module>
+        
+	<!-- Deployment Synchronizer -->
+	<module>../../../components/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer/4.2.1</module>
+
+  	<!-- Mashup components   -->
+        <module>../../../components/mashup/org.wso2.carbon.mashup.javascript-hostobjects.registry/4.2.1</module>
+
+        <!-- Governance Components -->
+        <module>../../../components/governance/org.wso2.carbon.governance.api/4.2.1</module>
+        <module>
+            ../../../components/governance/org.wso2.carbon.governance.registry.extensions/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.registry.eventing/4.2.0
+        </module>
+        <module>
+            ../../../components/governance/org.wso2.carbon.governance.custom.lifecycles.checklist/4.2.0
+        </module>
+        <module>
+            ../../../components/governance/org.wso2.carbon.governance.custom.lifecycles.checklist.ui/4.2.0
+        </module>
+        <module>
+            ../../../components/governance/org.wso2.carbon.governance.custom.lifecycles.history.ui/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.wsdltool/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.wsdltool.ui/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.generic.ui/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.generic/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.gadgetsource/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.gadgets.ui/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.notifications.ui/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.lcm/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.lcm.ui/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.dashboardpopulator/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.list/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.list.ui/4.2.0</module>
+        <module>../../../components/governance/org.wso2.carbon.governance.gadgets</module>
+        <module>
+            ../../../components/governance/org.wso2.carbon.governance.platform.extensions/4.2.0
+        </module>
+        <module>../../../components/governance/org.wso2.carbon.governance.client/4.2.0</module>
+
+        <!-- Application mgt components -->
+        <module>../../../components/application-mgt/org.wso2.carbon.application.mgt.synapse/4.2.0</module>
+
+        <!-- Stratos components -->
+        <module>../../../components/stratos/account-mgt</module>
+        <module>../../../components/stratos/cartridge-agent</module>
+        <module>../../../components/stratos/org.wso2.carbon.stratos.cloud.controller/2.2.0</module>
+        <module>../../../components/stratos/sso-mgt</module>
+        <module>../../../components/stratos/org.wso2.carbon.keystore.mgt/2.2.1</module>
+        <module>../../../components/stratos/org.wso2.carbon.stratos.common/2.2.0</module>
+	<module>../../../components/stratos/sample-installer/org.wso2.carbon.sample.installer/2.2.1</module>
+	<module>../../../components/stratos/redirector/org.wso2.carbon.redirector.servlet/2.2.1</module>
+	<module>../../../components/stratos/org.wso2.carbon.stratos.deployment/2.2.1</module>
+
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.nhttp/4.2.0</module>
+
+        <module>../../../components/ws-discovery/org.wso2.carbon.discovery.proxy/4.2.1</module>
+        <module>../../../components/ws-discovery/org.wso2.carbon.discovery.core/4.2.1</module>
+
+	<!-- Data bridge components -->
+	<module>../../../components/data-bridge/org.wso2.carbon.databridge.commons/4.2.1</module>
+        <!--module>../../../components/data-bridge/org.wso2.carbon.databridge.receiver.thrift/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.test.thrift/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.core/4.2.0</module-->
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.agent.thrift/4.2.1</module>
+        <!--module>../../../components/data-bridge/org.wso2.carbon.databridge.receiver.restapi/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.streamdefn.cassandra/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.persistence.cassandra/4.2.0</module>
+        <module>../../../components/data-bridge/org.wso2.carbon.databridge.streamdefn.registry/4.2.0</module-->
+
+
+        <module>../../../components/application-deployers/org.wso2.carbon.application.deployer.synapse/4.2.0</module>
+
+        <module>../../../components/mediators</module>
+
+        <module>../../../components/data-sources</module>
+        <module>../../../components/scheduled-tasks</module>
+
+        <module>../../../components/synapse-registries</module>
+        <module>../../../components/sequence-editor</module>
+
+        <module>../../../components/business-processes</module>
+
+        <module>../../../components/ec2-client/4.2.0</module>
+        <module>../../../components/endpoint</module>
+        <module>../../../components/localentry</module>
+        <module>../../../components/mediation-initializer</module>
+        <module>../../../components/mediation-statistics</module>
+        <module>../../../components/mediation-tracer</module>
+        <module>../../../components/mediation</module>
+
+        <module>../../../components/message-relay</module>
+        <module>../../../components/proxy-admin</module>
+
+        <module>../../../components/startup</module>
+        <module>../../../components/synapse-config-admin</module>
+
+        <module>../../../components/transport-statistics</module>
+        <module>../../../components/unified-endpoint</module>
+
+        <!--module>../../../components/cassandra</module-->
+
+        <module>../../../components/rest-api</module>
+        <module>../../../components/hostobjects</module>
+
+	<!--AS Components-->
+	<module>../../../components/service-mgt/org.wso2.carbon.service.mgt/4.2.1</module>
+
+	<!--IS Components-->
+	<module>../../../components/identity/org.wso2.carbon.identity.core/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.entitlement/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.entitlement.common/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.thrift.authentication/4.2.1</module>
+	<module>../../../components/idp-mgt/org.wso2.carbon.idp.mgt/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.provider/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.user.store.configuration/4.2.1</module>
+	<module>../../../components/security/org.wso2.carbon.security.mgt/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.sts.store/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.sso.saml/4.2.1</module>
+	<module>../../../components/authenticators/saml2-sso-authenticator/org.wso2.carbon.identity.authenticator.saml2.sso.ui/4.2.1</module>
+	<module>../../../components/remote-usermgt/org.wso2.carbon.um.ws.api/4.2.1</module>
+	<module>../../../components/remote-usermgt/org.wso2.carbon.um.ws.service/4.2.1</module>
+	<module>../../../components/user-manager/org.wso2.carbon.user.mgt/4.2.1</module>
+
+        <!--API Manager Components - Start-->
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.ui/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.endpoint/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.oauth.common/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.application.authenticator.samlsso/4.2.0</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.application.authentication.framework/4.2.1</module>
+        <module>../../../components/apimgt</module>
+        <!--API Manager Components - End-->
+
+        <module>../../../components/load-balancer</module>
+
+        <!--module>../../../components/event-processing</module-->
+
+        <module>../../../components/webapp-mgt/org.wso2.carbon.webapp.mgt/4.2.1</module>
+        <module>../../../components/ntask/org.wso2.carbon.ntask.core/4.2.1</module>
+        <!--module>../../../components/ndatasource/org.wso2.carbon.ndatasource.ui/4.2.1</module-->
+	<module>../../../components/wsdl2form/org.wso2.carbon.wsdl2form/4.2.1</module>
+
+        <!--AS fixes-->
+	<module>../../../components/system-statistics/org.wso2.carbon.statistics/4.2.1</module>
+        <module>../../../components/system-statistics/org.wso2.carbon.statistics.ui/4.2.1</module>
+
+	<!-- event components -->
+        <module>../../../components/event/org.wso2.carbon.event.core/4.2.1</module>
+        <module>../../../components/event/org.wso2.carbon.event.ws/4.2.1</module>
+
+	<!-- Reporting components -->
+        <module>../../../components/reporting/org.wso2.carbon.reporting.core/4.2.1</module>
+
+    </modules>
+</project>

@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>platform-parent</artifactId>
+        <version>4.2.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases</artifactId>
+    <packaging>pom</packaging>
+    <version>4.2.0-chunk01</version>
+    <name>WSO2 Carbon Product Releases- Aggregate Pom</name>
+    <description>WSO2 Carbon Platform with all its dependents, components, features and products
+    </description>
+    <url>http://wso2.org</url>
+
+	     <modules>
+                <module>dependencies</module>
+                <module>service-stubs</module>
+                <module>components</module>
+        	<module>features</module>
+		<module>../../platform-integration/test-automation-framework/4.2.0</module>
+                <module>products</module>
+             </modules>
+
+</project>

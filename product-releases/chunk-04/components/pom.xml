@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk04</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-components</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Product releases - components - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+	
+        <module>../../../components/system-statistics/org.wso2.carbon.statistics/4.2.2</module>
+        <module>../../../components/cg</module>
+        <module>../../../components/logging/org.wso2.carbon.logging.view.ui/4.2.1</module> 
+
+        <!-- Application mgt components -->
+        <module>../../../components/application-mgt/org.wso2.carbon.application.mgt.synapse.ui/4.2.0</module>
+
+	<!-- Application Deployer components --> 
+        <module>../../../components/application-deployers/org.wso2.carbon.application.deployer.synapse/4.2.1</module>
+
+	<!-- Deployment synchronizer -->
+	<module>../../../components/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer.subversion/4.2.1</module>
+	<module>../../../components/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer.git/4.2.1</module>
+
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.vfs/4.2.0</module>
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.fix/4.2.0</module>
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.jms/4.2.1</module>
+        <module>../../../components/transport-mgt/org.wso2.carbon.transport.nhttp/4.2.1</module>
+
+        <!--IS Components - Start-->
+	<module>../../../components/sts/org.wso2.carbon.sts/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.entitlement.proxy/4.2.1</module>
+        <module>../../../components/identity/org.wso2.carbon.identity.entitlement.mediator/4.2.1</module>
+	<module>../../../components/identity/org.wso2.carbon.identity.oauth.mediator/4.2.1</module>
+        <!--IS Components - End-->
+
+        <module>../../../components/transaction-manager/org.wso2.carbon.transaction.manager/4.2.1</module>
+
+        <!-- ESB components start -->
+	
+	<!-- Mediators Start-->
+        <module>../../../components/mediators/log</module>
+        <module>../../../components/mediators/send</module>
+        <module>../../../components/mediators/calltemplate</module>
+        <module>../../../components/mediators/aggregate</module>
+        <module>../../../components/mediators/clone</module>
+        <module>../../../components/mediators/dblookup</module>
+        <module>../../../components/mediators/fault</module>
+        <module>../../../components/mediators/header</module>
+        <module>../../../components/mediators/property</module>
+        <module>../../../components/mediators/switch</module>
+        <module>../../../components/mediators/store</module>
+        <module>../../../components/mediators/validate</module>
+        <module>../../../components/mediators/xslt</module>
+        <module>../../../components/mediators/callout</module>
+        <module>../../../components/mediators/dbreport</module>
+    	<module>../../../components/mediators/filter</module>
+        <module>../../../components/mediators/iterate</module>
+        <module>../../../components/mediators/rmsequence</module>
+        <module>../../../components/mediators/script</module>
+        <module>../../../components/mediators/sequence</module>
+        <module>../../../components/mediators/spring</module>
+        <module>../../../components/mediators/throttle</module>
+	<module>../../../components/mediators/xquery</module>
+        <module>../../../components/mediators/cache</module>
+        <module>../../../components/mediators/in</module>
+        <module>../../../components/mediators/out</module>
+        <module>../../../components/mediators/drop</module>
+        <module>../../../components/mediators/entitlement</module>
+        <module>../../../components/mediators/oauth</module>
+	<module>../../../components/mediators/transaction</module>
+        <module>../../../components/mediators/rule</module>
+	<!--<module>../../../components/mediators/autoscale</module> -->
+        <module>../../../components/mediators/uiless</module>
+        <module>../../../components/mediators/enqueue</module>
+        <module>../../../components/mediators/smooks</module>
+        <module>../../../components/mediators/bam</module>
+	<module>../../../components/mediators/enrich</module>
+        <module>../../../components/mediators/urlrewrite</module>
+        <module>../../../components/mediators/conditionalrouter</module>
+        <module>../../../components/mediators/payloadFactory</module>
+        <module>../../../components/mediators/ejb</module>
+        <module>../../../components/mediators/bean-mediator</module>
+        <module>../../../components/mediators/loopback</module>
+        <module>../../../components/mediators/respond</module>
+        <module>../../../components/mediators/call</module>
+	<!-- Mediators End -->
+
+        <module>../../../components/business-messaging</module>
+
+	<!-- Mediation Start -->
+    	<module>../../../components/mediation/message-store</module>
+	<module>../../../components/mediation/message-processor</module>
+	<module>../../../components/mediation/mediation-library</module>
+	<module>../../../components/mediation/mediation-security</module>
+	<!-- Mediation End -->
+
+    	<module>../../../components/synapse-artifact-uploader</module>
+
+   	 <module>../../../components/rule</module>
+
+	<module>../../../components/priority-mediation</module>
+	<module>../../../components/proxy-admin/org.wso2.carbon.proxyadmin/4.2.1</module>
+	<module>../../../components/proxy-admin/org.wso2.carbon.proxyadmin.common/4.2.0</module>
+	<module>../../../components/proxy-admin/org.wso2.carbon.proxyadmin.ui/4.2.0</module>
+    	<module>../../../components/data-agents/org.wso2.carbon.bam.mediationstats.data.publisher/4.2.1</module>
+    	<module>../../../components/rest-api/org.wso2.carbon.rest.api/4.2.1</module>
+   	<module>../../../components/sequence-editor/org.wso2.carbon.mediator.service/4.2.1</module>
+        <!-- ESB components end -->
+
+        <module>../../../components/data-sources/org.wso2.carbon.datasource/4.2.1</module>
+	<module>../../../components/security/org.wso2.carbon.security.mgt/4.2.2</module> 
+	
+    </modules>
+</project>

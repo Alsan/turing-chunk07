@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>platform-parent</artifactId>
+        <version>4.2.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases</artifactId>
+    <packaging>pom</packaging>
+    <version>4.2.0-chunk03</version>
+    <name>WSO2 Carbon Product Releases- Aggregate Pom</name>
+    <description>WSO2 Carbon Platform with all its dependents, components, features and products
+    </description>
+    <url>http://wso2.org</url>
+
+
+    <profiles>
+	<profile>
+	  <id>default</id>
+	  <activation>
+		<activeByDefault>true</activeByDefault>
+	  </activation>
+	     <modules>
+                <module>dependencies</module>
+                <module>service-stubs</module>
+                <module>components</module>
+
+                <module>../../platform-integration/test-automation-framework/4.2.2</module>
+        	<module>features</module>
+                <module>products</module>
+		<module>../../features/nested-categories/cep</module>
+		<module>../../features/repository/4.2.2</module>
+             </modules>
+	</profile>
+	<profile>
+	  <id>builder</id>
+	 <activation>
+                <property>
+                    <name>builder</name>
+                    <value>true</value>
+                </property>
+            </activation>
+
+	     <modules>
+		<module>dependencies</module>
+                <module>service-stubs</module>
+                <module>components</module>
+
+		<module>../../platform-integration/test-automation-framework/4.2.2</module>
+                <module>features</module>
+                <module>products</module>
+             </modules>
+	</profile>
+     </profiles>
+     
+     <build>
+         <extensions>
+             <extension>
+                 <groupId>org.apache.maven.wagon</groupId>
+                 <artifactId>wagon-ssh</artifactId>
+                 <version>2.1</version>
+             </extension>
+         </extensions>
+     </build>
+
+     <distributionManagement>
+         <repository>
+             <id>wso2-maven2-repository</id>
+             <name>WSO2 Maven2 Repository</name>
+             <url>scp://dist.wso2.org/home/httpd/dist.wso2.org/maven2/</url>
+         </repository>
+         <snapshotRepository>
+             <id>wso2-maven2-snapshot-repository</id>
+             <name>WSO2 Maven2 Snapshot Repository</name>
+             <url>scp://dist.wso2.org/home/httpd/dist.wso2.org/snapshots/maven2/</url>
+         </snapshotRepository>
+     </distributionManagement>
+
+
+
+</project>

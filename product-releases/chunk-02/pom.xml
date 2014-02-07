@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>platform-parent</artifactId>
+        <version>4.2.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases</artifactId>
+    <packaging>pom</packaging>
+    <version>4.2.0-chunk02</version>
+    <name>WSO2 Carbon Product Releases- Aggregate Pom</name>
+    <description>WSO2 Carbon Platform with all its dependents, components, features and products
+    </description>
+    <url>http://wso2.org</url>
+
+
+    <profiles>
+	<profile>
+	  <id>default</id>
+	  <activation>
+		<activeByDefault>true</activeByDefault>
+	  </activation>
+	     <modules>
+                <module>dependencies</module>
+                <module>service-stubs</module>
+                <module>components</module>
+                <module>platform-integration/test-automation-framework</module>
+        	<module>features</module>
+                <module>products</module>
+		<!--module>../../features/nested-categories/apimgt</module>
+		<module>../../features/nested-categories/greg</module>
+		<module>../../features/nested-categories/cep</module>
+		<module>../../features/repository/4.2.1</module-->
+             </modules>
+	</profile>
+	<profile>
+	  <id>builder</id>
+	 <activation>
+                <property>
+                    <name>builder</name>
+                    <value>true</value>
+                </property>
+            </activation>
+
+	     <modules>
+		<module>dependencies</module>
+                <module>service-stubs</module>
+                <module>components</module>
+		<module>platform-integration/test-automation-framework</module>
+                <module>features</module>
+                <module>products</module>
+             </modules>
+	</profile>
+     </profiles>
+
+
+</project>

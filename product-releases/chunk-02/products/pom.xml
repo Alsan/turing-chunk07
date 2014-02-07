@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk02</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.wso2.carbon</groupId>
+    <artifactId>product-releases-products</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Releases - products - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+		<modules>
+			<module>../../../products/apimgt/1.5.0</module>
+			<module>../../../products/greg/4.6.0</module>
+			<!--module>../../../products/ues/1.0.1</module-->
+			<!--module>../../../products/cep/3.0.0</module-->
+			<module>../../../products/elb/2.1.0</module>
+		</modules>
+
+</project>

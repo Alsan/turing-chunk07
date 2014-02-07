@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk04</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases-features</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Patch releases - features - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>
+        <!-- CG Agent-->
+        <module>../../../features/cg</module>
+
+        <!-- statistics feature -->
+        <module>../../../features/system-statistics/org.wso2.carbon.system.statistics.server.feature/4.2.2</module>
+        <module>../../../features/system-statistics/org.wso2.carbon.system.statistics.feature/4.2.2</module>
+
+        <!-- application-mgt features -->
+        <module>../../../features/application-mgt/org.wso2.carbon.application.mgt.synapse.ui.feature/4.2.0</module>
+        <module>../../../features/application-mgt/org.wso2.carbon.application.mgt.synapse.feature/4.2.0</module>        
+
+        <!-- application-deployers features -->
+	<module>../../../features/application-deployers/org.wso2.carbon.application.deployer.synapse.feature/4.2.1</module>        
+
+	<!-- Deployment Synchronizer -->
+	<module>../../../features/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer.subversion.feature/4.2.1</module>
+	<module>../../../features/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer.feature/4.2.2</module>
+	<module>../../../features/deployment-synchronizer/org.wso2.carbon.deployment.synchronizer.git.feature/4.2.1</module>    	
+
+	<!-- transport-mgt features -->
+        <module>../../../features/transport-mgt/org.wso2.carbon.transport.vfs.feature/4.2.0</module>
+        <module>../../../features/transport-mgt/org.wso2.carbon.transport.fix.feature/4.2.0</module>
+	<module>../../../features/transport-mgt/org.wso2.carbon.transport.jms.feature/4.2.1</module>
+	<module>../../../features/transport-mgt/org.wso2.carbon.transport.nhttp.feature/4.2.1</module>
+
+        <!--Identity Features-->
+	
+        <module>../../../features/sts/org.wso2.carbon.sts.server.feature/4.2.1</module>
+        <module>../../../features/sts/org.wso2.carbon.sts.feature/4.2.1</module>
+        <module>../../../features/identity/xacml/org.wso2.carbon.identity.xacml.mediator.feature/4.2.1</module>
+	<module>../../../features/identity/oauth/org.wso2.carbon.identity.oauth.mediator.feature/4.2.1</module>
+	
+        <!-- Start ESB features -->
+        <module>../../../features/mediation-library</module>
+        <module>../../../features/mediation</module>
+        <module>../../../features/mediators</module>
+        <module>../../../features/synapse-artifact-uploader</module>
+        <module>../../../features/scheduled-tasks</module>
+        <module>../../../features/endpoints</module>
+        <module>../../../features/localentry</module>
+        <module>../../../features/proxyadmin</module>
+        <module>../../../features/priority-mediation</module>
+        <module>../../../features/esb-mediation</module>
+        <module>../../../features/mediation-security</module>
+        <module>../../../features/rule</module>
+        <module>../../../features/transports</module>
+        <module>../../../features/transaction-manager/org.wso2.carbon.transaction.manager.server.feature/4.2.1</module>
+        <module>../../../features/transaction-manager/org.wso2.carbon.transaction.manager.feature/4.2.1</module>
+    	<module>../../../features/synapse/org.apache.synapse.wso2.feature/2.1.2-wso2v2</module>
+    	<module>../../../features/synapse/org.apache.synapse.samples.feature/2.1.2-wso2v2</module>
+    	<module>../../../features/synapse/org.apache.synapse.transport.nhttp.feature/2.1.2-wso2v2</module>
+    	<module>../../../features/synapse/org.apache.synapse.transport.vfs.feature/2.1.2-wso2v2</module>
+    	<module>../../../features/synapse/org.apache.synapse.transport.fix.feature/2.1.2-wso2v2</module>
+    	<module>../../../features/synapse/org.apache.synapse.transport.vfs.smb.feature/2.1.2-wso2v2</module>
+        <module>../../../features/data-agents/mediation/org.wso2.carbon.bam.mediation.agent.server.feature/4.2.1</module>
+        <module>../../../features/data-agents/mediation/org.wso2.carbon.bam.mediation.agent.feature/4.2.1</module>
+        <module>../../../features/rest-api/org.wso2.carbon.rest.api.server.feature/4.2.1</module>
+        <module>../../../features/rest-api/org.wso2.carbon.rest.api.feature/4.2.1</module>
+        <module>../../../features/sequence-editor</module> 
+        <!--End ESB features -->
+        
+	<module>../../../features/data-sources/org.wso2.carbon.datasource.server.feature/4.2.1</module>
+
+        <!-- Logging Management features -->
+        <module>../../../features/logging-mgt/org.wso2.carbon.logging.mgt.ui.feature/4.2.1</module>
+        <!--<module>../../../features/logging-mgt/org.wso2.carbon.logging.mgt.server.feature/4.2.1</module>-->
+        <module>../../../features/logging-mgt/org.wso2.carbon.logging.mgt.feature/4.2.1</module>
+        <!-- Logging Management features end -->
+
+	<module>../../../features/security-mgt/org.wso2.carbon.security.mgt.server.feature/4.2.2</module>
+	<module>../../../features/security-mgt/org.wso2.carbon.security.mgt.feature/4.2.2</module>
+	<module>../../../features/ws-discovery/org.wso2.carbon.discovery.ui.feature/4.2.0</module>
+
+    </modules>
+</project>
+

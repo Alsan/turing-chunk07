@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+    <parent>
+        <groupId>org.wso2.carbon</groupId>
+        <artifactId>product-releases</artifactId>
+        <version>4.2.0-chunk05</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>product-releases-features</artifactId>
+    <packaging>pom</packaging>
+    <name>WSO2 Carbon - Patch releases - features - Aggregator Module</name>
+    <url>http://wso2.org</url>
+
+    <modules>	
+        <module>../../../features/security-mgt/org.wso2.carbon.security.mgt.server.feature/4.2.3</module>
+        <module>../../../features/security-mgt/org.wso2.carbon.security.mgt.feature/4.2.3</module>
+
+	<!--BPS-->
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.bpel.server.feature/4.2.0</module>
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.bpel.ui.feature/4.2.0</module>
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.bpel.feature/4.2.0</module>
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.humantask.server.feature/4.2.0</module>
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.humantask.ui.feature/4.2.0</module>
+	<module>../../../features/application-mgt/org.wso2.carbon.application.mgt.humantask.feature/4.2.0</module>
+
+	<module>../../../features/application-deployers/org.wso2.carbon.application.deployer.bpel.feature/4.2.0</module>
+	<module>../../../features/application-deployers/org.wso2.carbon.application.deployer.humantask.feature/4.2.0</module>
+
+	<module>../../../features/bpel/org.wso2.carbon.bpel.ui.feature/4.2.0</module>
+	<module>../../../features/bpel/org.wso2.carbon.bpel.server.feature/4.2.0</module>
+	<module>../../../features/bpel/org.wso2.carbon.bpel.feature/4.2.0</module>
+	<module>../../../features/bpel/org.wso2.carbon.bpel.bam.publisher.feature/4.2.0</module>
+	<module>../../../features/humantask/org.wso2.carbon.humantask.ui.feature/4.2.1</module>
+	<module>../../../features/humantask/org.wso2.carbon.humantask.server.feature/4.2.1</module>
+	<module>../../../features/humantask/org.wso2.carbon.humantask.feature/4.2.1</module>
+	<module>../../../features/attachment-mgt/org.wso2.carbon.attachment.mgt.server.feature/4.2.1</module>    
+	<module>../../../features/attachment-mgt/org.wso2.carbon.attachment.mgt.feature/4.2.1</module>
+	<module>../../../features/unified-endpoint/org.wso2.carbon.unifiedendpoint.server.feature/4.2.0</module>
+	<module>../../../features/unified-endpoint/org.wso2.carbon.unifiedendpoint.ui.feature/4.2.0</module>
+	<module>../../../features/unified-endpoint/org.wso2.carbon.unifiedendpoint.feature/4.2.0</module>
+
+
+	<!--DSS-->
+	<module>../../../features/data-services/data-services-hosting/org.wso2.carbon.dataservices.server.feature/4.2.1</module>
+	<module>../../../features/data-services/data-services-hosting/org.wso2.carbon.dataservices.ui.feature/4.2.1</module>
+	<module>../../../features/data-services/data-services-hosting/org.wso2.carbon.dataservices.feature/4.2.1</module>
+	<module>../../../features/data-services/data-services-tasks/org.wso2.carbon.dataservices.task.server.feature/4.2.1</module>
+	<module>../../../features/data-services/data-services-tasks/org.wso2.carbon.dataservices.task.feature/4.2.1</module>
+	<module>../../../features/ndatasource/org.wso2.carbon.ndatasource.ui.feature/4.2.2</module>
+	<module>../../../features/ndatasource/org.wso2.carbon.ndatasource.feature/4.2.2</module>
+
+
+	<module>../../../features/logging-mgt/org.wso2.carbon.logging.mgt.server.feature/4.2.1</module>
+	<module>../../../features/logging-mgt/org.wso2.carbon.logging.mgt.feature/4.2.2</module>
+
+	<module>../../../features/stratos/deployment/2.2.1</module>
+	<module>../../../features/axis2-repo-mgt/org.wso2.carbon.repomanager.axis2.feature/4.2.2</module>
+
+
+	<!--AS-->
+        <module>../../../features/webapp-mgt/org.wso2.carbon.webapp.mgt.ui.feature/4.2.1</module>
+	<module>../../../features/webapp-mgt/org.wso2.carbon.webapp.mgt.feature/4.2.2</module>
+	<module>../../../features/webapp-mgt/org.wso2.carbon.webapp.mgt.server.feature/4.2.2</module>
+	
+	<module>../../../features/as-runtimes/org.wso2.carbon.as.runtimes.cxf.feature/4.2.2</module>
+
+	<module>nested-categories</module>
+	<!--AS-->
+
+	<!--  Mashup feature   -->
+        <module>../../../features/mashup/js-services/org.wso2.carbon.jsservices.server.feature/4.2.1</module>
+        <module>../../../features/mashup/js-services/org.wso2.carbon.jsservices.feature/4.2.1</module>
+
+    </modules>
+</project>
+
